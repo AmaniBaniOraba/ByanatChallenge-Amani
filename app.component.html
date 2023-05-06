@@ -1,0 +1,42 @@
+<h1>angular app to retrieving data from API and display  it in table and Chart </h1>
+
+<table
+  
+  class="table"
+>
+  <thead class="title-text">
+    <tr class="table-header">
+      <th class="table-column-header">tower_id</th>
+      <th class="table-column-header">operator</th>
+      <th class="table-column-header">address</th>
+      <th class="table-column-header">height</th>
+      <th class="table-column-header">tower_type</th>
+      <th class="table-column-header">latitude</th>
+      <th class="table-column-header">longitude</th>
+      <th class="table-column-header">technology</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="towersCell?.length != 0">
+    <tr *ngFor="let towersCell of towersCell; let i = index">
+      <th class="first-column-title">{{ towersCell.tower_id }}</th>
+      <th class="column-title">{{ towersCell.operator }}</th>
+      <th class="column-title">{{ towersCell.address }}</th>
+      <th class="column-title">{{ towersCell.height }}</th>
+      <th class="column-title">{{ towersCell.tower_type }}</th>
+      <th class="column-title">{{ towersCell.latitude }}</th>
+      <th class="column-title">{{ towersCell.longitude }}</th>
+      <th class="column-title">{{ towersCell.technology }}</th>
+      
+      
+      
+    </tr>
+  </tbody>
+  <tbody *ngIf="!towersCell">
+    <tr>
+      <td colspan="3" class="no-data">Loading...</td>
+    </tr>
+  </tbody>
+</table>
+<div>
+  <canvas id="canvas">{{chart}}</canvas>
+</div>

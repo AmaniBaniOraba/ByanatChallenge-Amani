@@ -13,8 +13,7 @@ export class AppComponent implements OnInit {
   
   chart: any = [];
   result: any;
-  coinPrice: any;
-  coinName: any;
+ 
 
 
   constructor(private rs : RestService){}

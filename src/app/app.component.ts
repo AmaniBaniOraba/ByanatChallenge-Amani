@@ -9,7 +9,6 @@ import { TowersCell } from './TowersCell';
 })
 export class AppComponent implements OnInit {
   title = 'byanatchallenge';
-  title2 = 'ng-chart';
   
   chart: any = [];
   result: any;

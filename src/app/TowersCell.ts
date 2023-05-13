@@ -1,12 +1,12 @@
 export class TowersCell
 {
-    tower_id : string;
+  tower_id : number;
     operator : string;
     address : string;
-    height : string;
+    height :number ;
     tower_type : string;
-    latitude : string;
-    longitude : string;
+    latitude :number;
+    longitude : number;
     technology : string;
 
 
